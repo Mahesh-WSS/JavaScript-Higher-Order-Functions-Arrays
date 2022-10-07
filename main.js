@@ -128,5 +128,26 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 64, 15, 45, 52, 64, 32];
 //     return a+b;
 // }, 0);
 
-const ageSum = ages.reduce((a,b) => a+b, 0);
-console.log(ageSum);
+// const ageSum = ages.reduce((a,b) => a+b, 0);
+// console.log(ageSum);
+
+// get total years for all companies
+
+// const totalYears = companies.reduce(function(total, company){
+//     return total + (company.end - company.start);
+// }, 0);
+
+// const totalYears = companies.reduce((total, company) => total + (company.end - company.start)
+// , 0);
+
+// console.log(totalYears);
+
+// combine Methods
+
+const combined = ages
+    .map(age => age * 2)
+    .filter(age => age >=40)
+    .sort((a,b) => a-b)
+    .reduce((a,b) => a+b, 0);
+
+console.log(combined);
